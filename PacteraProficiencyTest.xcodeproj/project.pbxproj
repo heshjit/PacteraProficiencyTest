@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		8BEB12E91BAE763A00CC19AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB12E81BAE763A00CC19AF /* main.m */; };
 		8BEB12EC1BAE763A00CC19AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB12EB1BAE763A00CC19AF /* AppDelegate.m */; };
-		8BEB12EF1BAE763A00CC19AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB12EE1BAE763A00CC19AF /* ViewController.m */; };
 		8BEB12F41BAE763A00CC19AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB12F31BAE763A00CC19AF /* Images.xcassets */; };
 		8BEB12F71BAE763A00CC19AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB12F51BAE763A00CC19AF /* LaunchScreen.xib */; };
 		8BEB13031BAE763A00CC19AF /* PacteraProficiencyTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB13021BAE763A00CC19AF /* PacteraProficiencyTestTests.m */; };
+		8BEB130E1BAE7D8600CC19AF /* FeedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB130D1BAE7D8600CC19AF /* FeedsTableViewController.m */; };
+		8BEB13121BAE7E0D00CC19AF /* FeedTableCellsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB13111BAE7E0D00CC19AF /* FeedTableCellsTableViewCell.m */; };
+		8BEB13161BAE809800CC19AF /* FeedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB13151BAE809800CC19AF /* FeedList.m */; };
+		8BEB13E41BAE913900CC19AF /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB13E31BAE913900CC19AF /* Feed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +34,19 @@
 		8BEB12E81BAE763A00CC19AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BEB12EA1BAE763A00CC19AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8BEB12EB1BAE763A00CC19AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8BEB12ED1BAE763A00CC19AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8BEB12EE1BAE763A00CC19AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8BEB12F31BAE763A00CC19AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8BEB12F61BAE763A00CC19AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8BEB12FC1BAE763A00CC19AF /* PacteraProficiencyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PacteraProficiencyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEB13011BAE763A00CC19AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEB13021BAE763A00CC19AF /* PacteraProficiencyTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacteraProficiencyTestTests.m; sourceTree = "<group>"; };
+		8BEB130C1BAE7D8600CC19AF /* FeedsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedsTableViewController.h; sourceTree = "<group>"; };
+		8BEB130D1BAE7D8600CC19AF /* FeedsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedsTableViewController.m; sourceTree = "<group>"; };
+		8BEB13101BAE7E0D00CC19AF /* FeedTableCellsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableCellsTableViewCell.h; sourceTree = "<group>"; };
+		8BEB13111BAE7E0D00CC19AF /* FeedTableCellsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableCellsTableViewCell.m; sourceTree = "<group>"; };
+		8BEB13141BAE809800CC19AF /* FeedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedList.h; sourceTree = "<group>"; };
+		8BEB13151BAE809800CC19AF /* FeedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedList.m; sourceTree = "<group>"; };
+		8BEB13E21BAE913900CC19AF /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		8BEB13E31BAE913900CC19AF /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +88,10 @@
 		8BEB12E51BAE763A00CC19AF /* PacteraProficiencyTest */ = {
 			isa = PBXGroup;
 			children = (
+				8BEB13131BAE807D00CC19AF /* Model */,
+				8BEB130F1BAE7DB900CC19AF /* View */,
 				8BEB12EA1BAE763A00CC19AF /* AppDelegate.h */,
 				8BEB12EB1BAE763A00CC19AF /* AppDelegate.m */,
-				8BEB12ED1BAE763A00CC19AF /* ViewController.h */,
-				8BEB12EE1BAE763A00CC19AF /* ViewController.m */,
 				8BEB12F31BAE763A00CC19AF /* Images.xcassets */,
 				8BEB12F51BAE763A00CC19AF /* LaunchScreen.xib */,
 				8BEB12E61BAE763A00CC19AF /* Supporting Files */,
@@ -114,6 +123,28 @@
 				8BEB13011BAE763A00CC19AF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BEB130F1BAE7DB900CC19AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB130C1BAE7D8600CC19AF /* FeedsTableViewController.h */,
+				8BEB130D1BAE7D8600CC19AF /* FeedsTableViewController.m */,
+				8BEB13101BAE7E0D00CC19AF /* FeedTableCellsTableViewCell.h */,
+				8BEB13111BAE7E0D00CC19AF /* FeedTableCellsTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8BEB13131BAE807D00CC19AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB13141BAE809800CC19AF /* FeedList.h */,
+				8BEB13151BAE809800CC19AF /* FeedList.m */,
+				8BEB13E21BAE913900CC19AF /* Feed.h */,
+				8BEB13E31BAE913900CC19AF /* Feed.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BEB12EF1BAE763A00CC19AF /* ViewController.m in Sources */,
+				8BEB13161BAE809800CC19AF /* FeedList.m in Sources */,
 				8BEB12EC1BAE763A00CC19AF /* AppDelegate.m in Sources */,
 				8BEB12E91BAE763A00CC19AF /* main.m in Sources */,
+				8BEB13E41BAE913900CC19AF /* Feed.m in Sources */,
+				8BEB13121BAE7E0D00CC19AF /* FeedTableCellsTableViewCell.m in Sources */,
+				8BEB130E1BAE7D8600CC19AF /* FeedsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +440,7 @@
 				8BEB13081BAE763A00CC19AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BEB13091BAE763A00CC19AF /* Build configuration list for PBXNativeTarget "PacteraProficiencyTestTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +449,7 @@
 				8BEB130B1BAE763A00CC19AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

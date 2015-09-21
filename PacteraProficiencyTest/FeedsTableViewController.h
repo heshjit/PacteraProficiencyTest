@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FeedsTableViewController.h
 //  PacteraProficiencyTest
 //
 //  Created by Developer on 20/09/2015.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FeedList.h"
 
-@interface ViewController : UIViewController
+@interface FeedsTableViewController : UITableViewController
 
 
+-(void)loadFromFeedURL;
 @end
-
