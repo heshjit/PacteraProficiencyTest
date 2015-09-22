@@ -161,4 +161,8 @@
     [self layoutIfNeeded];
 }
 
+-(void)dealloc{  
+    [super dealloc];
+}
+
 @end

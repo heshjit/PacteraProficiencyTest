@@ -25,6 +25,8 @@
     self.window.rootViewController = navigationController;
     
     [self.window makeKeyAndVisible];
+    [feedsTableViewController release];
+    [navigationController release];
     return YES;
 }
 

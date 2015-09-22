@@ -63,8 +63,13 @@ static NSString* const kURL= @"https://dl.dropboxusercontent.com/u/746330/facts.
             
             FeedList *feedlist = [[FeedList alloc]initWithJSONData:localDisctionary];
             
+            if (self.feedArray) {
+                self.feedArray = nil;
+            }
             self.feedArray = feedlist.feedArray;
             self.title = feedlist.mainTitle;
+            [serverResponse release];
+            [feedlist release];
             [self.tableView reloadData];
         }
         else{
@@ -83,6 +88,7 @@ static NSString* const kURL= @"https://dl.dropboxusercontent.com/u/746330/facts.
         }
         
     }]resume];
+    [url release];
 }
 
 #pragma mark - Table view data source
@@ -103,7 +109,7 @@ static NSString* const kURL= @"https://dl.dropboxusercontent.com/u/746330/facts.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if ([self.feedArray count] == 0) { //  Default case for error handling
-        UITableViewCell *loadingCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"NoDataIdentifier"];
+        UITableViewCell *loadingCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"NoDataIdentifier"]autorelease];
         loadingCell.textLabel.text = self.errorMsg;
         loadingCell.textLabel.font = [UIFont systemFontOfSize:14];
         loadingCell.textLabel.textAlignment = NSTextAlignmentCenter;
@@ -118,7 +124,7 @@ static NSString* const kURL= @"https://dl.dropboxusercontent.com/u/746330/facts.
     FeedTableCellsTableViewCell *feedCell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (feedCell == nil)
     {
-        feedCell = [[FeedTableCellsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier feed:feed];
+        feedCell = [[[FeedTableCellsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier feed:feed]autorelease];
         [feedCell configureCell:feed];
     }
     return feedCell;
@@ -136,7 +142,7 @@ static NSString* const kURL= @"https://dl.dropboxusercontent.com/u/746330/facts.
     FeedTableCellsTableViewCell * feedCell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (feedCell == nil)
     {
-        feedCell = [[FeedTableCellsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier feed:feed];
+        feedCell = [[[FeedTableCellsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier feed:feed]autorelease];
         [feedCell configureCell:feed];
     }
     int height = feedCell.contentView.frame.size.height;
@@ -169,7 +175,15 @@ static NSString* const kURL= @"https://dl.dropboxusercontent.com/u/746330/facts.
             }
             
         }]resume];
+        [url release];
     }
+}
+
+-(void)dealloc{
+    [_feedArray release];
+    [_errorMsg release];
+    [_tableRefreshControl release];
+    [super dealloc];
 }
 
 /*

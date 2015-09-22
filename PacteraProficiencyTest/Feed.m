@@ -45,4 +45,12 @@ static NSString* const kImageHref=@"imageHref";
     return self;
 }
 
+-(void)dealloc{   
+    [_feedTitle release];
+    [_feedDescription release];
+    [_feedImageURL release];
+    //[_feedImage release];
+    [super dealloc];
+}
+
 @end

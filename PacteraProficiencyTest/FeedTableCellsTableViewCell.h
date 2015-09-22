@@ -11,8 +11,8 @@
 
 @interface FeedTableCellsTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UIImageView *feedImage;
-@property (nonatomic, strong) NSLayoutConstraint *feedImageWidthConstraint;
+@property (nonatomic, assign) UIImageView *feedImage;
+@property (nonatomic, assign) NSLayoutConstraint *feedImageWidthConstraint;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier feed:(Feed *) feed;
 - (void) configureCell: (Feed *) feed;

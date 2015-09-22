@@ -28,17 +28,24 @@ static NSString* const kFeedKey = @"rows";
 -(id) initWithJSONData:(NSDictionary *)jsonDictionary{
     self = [super init];
     if (self) {
-        _mainTitle = [jsonDictionary objectForKey:kTitle];
+        _mainTitle = [[jsonDictionary objectForKey:kTitle]copy];
         NSArray *array = [jsonDictionary objectForKey:kFeedKey];
         self.feedArray = [NSMutableArray array];
         
         for (NSDictionary *dict in array) {
             Feed *feed = [[Feed alloc]initFeedWithDictionary:dict];
             [self.feedArray addObject:feed];
+            [feed release];
+            feed = nil;
         }
-        
     }
     return self;
+}
+
+-(void)dealloc{
+    [_feedArray release];
+    [_mainTitle release];
+    [super dealloc];
 }
 
 @end
